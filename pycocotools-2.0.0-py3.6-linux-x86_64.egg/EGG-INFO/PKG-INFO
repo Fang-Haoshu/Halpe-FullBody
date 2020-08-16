@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: pycocotools
+Version: 2.0.0
+Summary: Tools for working with the MSCOCO dataset
+Home-page: https://github.com/cocodataset/cocoapi
+Author: Piotr Dollar and Tsung-Yi Lin
+Author-email: pdollar@gmail.com
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
