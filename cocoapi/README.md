@@ -6,5 +6,5 @@ Details:
 
 To install:
 
--For Python, run "make" under coco/PythonAPI
+- For Python, run "make" under coco/PythonAPI
 
