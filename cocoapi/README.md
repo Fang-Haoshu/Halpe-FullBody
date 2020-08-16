@@ -5,5 +5,6 @@ Details:
 - Change the sigmas in [PythonAPI/pycocotools/cocoeval.py](https://github.com/Fang-Haoshu/Halpe-FullBody/blob/master/cocoapi-master/PythonAPI/pycocotools/cocoeval.py#L207) to adapt to the 136-keypoints case.
 
 To install:
+
 -For Python, run "make" under coco/PythonAPI
 
