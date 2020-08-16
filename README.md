@@ -1,7 +1,7 @@
 # Halpe Full-Body Human Keypoints and HOI-Det dataset
 
 ## What is Halpe?
-Halpe is a joint project under [AlphaPose](https://github.com/MVIG-SJTU/AlphaPose) and [HAKE](http://hake-mvig.cn/).  It aims at pushing <b>Human Understanding</b> to the extreme. We provide detailed annotation of human keypoints, together with the human-object interaction trplets from HICO-DET. For each person, we annotate 136 keypoints in total, including head,face,body,hand and foot. Below we provide some samples of Halpe dataset.
+**Halpe** is a joint project under [AlphaPose](https://github.com/MVIG-SJTU/AlphaPose) and [HAKE](http://hake-mvig.cn/).  It aims at pushing <b>Human Understanding</b> to the extreme. We provide detailed annotation of human keypoints, together with the human-object interaction trplets from HICO-DET. For each person, we annotate 136 keypoints in total, including head,face,body,hand and foot. Below we provide some samples of Halpe dataset.
 <div align="center">
     <img src="docs/1.jpg", width="400" alt>
     <img src="docs/2.jpg", width="400" alt>
@@ -72,10 +72,13 @@ Illustration:
 </div>
 
 ## Usage
-The annotation in the same format as COCO dataset. We also provide related APIs.
+The annotation is in the same format as COCO dataset. For usage, a good start is to check out the `vis.py`. We also provide related APIs.
 
 ## Evaluation
 We adopt the same evaluation metrics as COCO dataset. 
+
+## Related resources
+A concurrent work [COCO-WholeBody](https://github.com/jin-s13/COCO-WholeBody) also annotate the full body keypoints. And HOI-DET for COCO dataset is also available at [V-COCO](https://github.com/s-gupta/v-coco)
 
 ## Citation
 The paper introducing this project is coming soon.
