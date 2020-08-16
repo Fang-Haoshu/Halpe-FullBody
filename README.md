@@ -12,8 +12,11 @@ Halpe is a joint project under [AlphaPose](https://github.com/MVIG-SJTU/AlphaPos
 
 ## Download
 Train annotations [[Baidu](https://pan.baidu.com/s/1hWX-I-HpXXnLcprFskfriQ) | [Google](https://drive.google.com/file/d/13vj8H0GZ9yugLPhVVWV9fcH-3RyW5Wk5/view?usp=sharing) ]
+
 Val annotations [[Baidu](https://pan.baidu.com/s/1yDvBkXTSwk20EjiYzimpPw) | [Google](https://drive.google.com/file/d/1FdyCgro2t9_nOhTlMPjEf3c0aLOz9wi6/view?usp=sharing) ]
+
 Train images from [HICO-DET](https://drive.google.com/open?id=1QZcJmGVlF9f4h-XLWe9Gkmnmj2z1gSnk)
+
 Val images from [COCO](http://images.cocodataset.org/zips/val2017.zip)
 
 
