@@ -5,9 +5,9 @@ Halpe is a joint project under [AlphaPose](https://github.com/MVIG-SJTU/AlphaPos
 <div align="center">
     <img src="docs/1.jpg", width="400" alt>
     <img src="docs/2.jpg", width="400" alt>
-    <img src="docs/4.jpg", width="400" alt>
-    <img src="docs/5.jpg", width="400" alt>
-    <img src="docs/3.jpg", width="400" alt>
+    <img src="docs/4.jpg", width="250" alt>
+    <img src="docs/5.jpg", width="250" alt>
+    <img src="docs/3.jpg", width="300" alt>
 </div>
 
 ## Download
