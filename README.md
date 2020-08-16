@@ -1,26 +1,26 @@
-#Halpe Full-Body Human Keypoints and HOI-Det dataset
+# Halpe Full-Body Human Keypoints and HOI-Det dataset
 
-##What is Halpe?
+## What is Halpe?
 Halpe is a joint project under [AlphaPose](https://github.com/MVIG-SJTU/AlphaPose) and [HAKE](http://hake-mvig.cn/).  It aims at pushing <b>Human Understanding</b> to the extreme. We provide detailed annotation of human keypoints, together with the human-object interaction trplets from HICO-DET. For each person, we annotate 136 keypoints in total, including head,face,body,hand and foot. Below we provide some samples of Halpe dataset.
 <div align="center">
     <img src="docs/1.jpg", width="400" alt>
     <img src="docs/2.jpg", width="400" alt>
-    <img src="docs/3.jpg", width="400" alt>
     <img src="docs/4.jpg", width="400" alt>
     <img src="docs/5.jpg", width="400" alt>
+    <img src="docs/3.jpg", width="400" alt>
 </div>
 
-##Download
+## Download
 Train annotations [[Baidu](https://pan.baidu.com/s/1hWX-I-HpXXnLcprFskfriQ) | [Google](https://drive.google.com/file/d/13vj8H0GZ9yugLPhVVWV9fcH-3RyW5Wk5/view?usp=sharing) ]
 Val annotations [[Baidu](https://pan.baidu.com/s/1yDvBkXTSwk20EjiYzimpPw) | [Google](https://drive.google.com/file/d/1FdyCgro2t9_nOhTlMPjEf3c0aLOz9wi6/view?usp=sharing) ]
 Train images from [HICO-DET](https://drive.google.com/open?id=1QZcJmGVlF9f4h-XLWe9Gkmnmj2z1gSnk)
 Val images from [COCO](http://images.cocodataset.org/zips/val2017.zip)
 
 
-##Keypoints format
+## Keypoints format
 We annotate 136 keypoints in total:
 ```
-	//26 body keypoints
+    //26 body keypoints
     {0,  "Nose"},
     {1,  "LEye"},
     {2,  "REye"},
@@ -68,13 +68,13 @@ Illustration:
     21 hand keypoints
 </div>
 
-##Usage
+## Usage
 The annotation in the same format as COCO dataset. We also provide related APIs.
 
-##Evaluation
+## Evaluation
 We adopt the same evaluation metrics as COCO dataset. 
 
-##Citation
+## Citation
 The paper introducing this project is coming soon.
 If the data helps your research, please cite the following papers at present:
 ```
