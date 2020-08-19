@@ -19,6 +19,12 @@ Train images from [HICO-DET](https://drive.google.com/open?id=1QZcJmGVlF9f4h-XLW
 
 Val images from [COCO](http://images.cocodataset.org/zips/val2017.zip)
 
+## Realtime Demo with tracking
+Trained model coming soon! Stay tuned with [AlphaPose](https://github.com/MVIG-SJTU/AlphaPose)
+<div align="center">
+    <img src="docs/alphapose_136_2.gif", width="400" alt>
+</div>
+
 
 ## Keypoints format
 We annotate 136 keypoints in total:
