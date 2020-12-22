@@ -20,7 +20,8 @@ Train images from [HICO-DET](https://drive.google.com/open?id=1QZcJmGVlF9f4h-XLW
 Val images from [COCO](http://images.cocodataset.org/zips/val2017.zip)
 
 ## Realtime Demo with tracking
-Trained model coming soon! Stay tuned with [AlphaPose](https://github.com/MVIG-SJTU/AlphaPose)
+Trained model is available in [AlphaPose](https://github.com/MVIG-SJTU/AlphaPose)! 
+Check out its [MODEL_ZOO](https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/MODEL_ZOO.md)
 <div align="center">
     <img src="docs/alphapose_136_2.gif", width="400" alt>
 </div>
