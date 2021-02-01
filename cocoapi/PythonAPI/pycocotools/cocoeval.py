@@ -107,9 +107,35 @@ class COCOeval:
         # set ignore flag
         for gt in gts:
             gt['ignore'] = gt['ignore'] if 'ignore' in gt else 0
-            gt['ignore'] = 'iscrowd' in gt and gt['iscrowd']
+            # gt['ignore'] = 'iscrowd' in gt and gt['iscrowd']
             if p.iouType == 'keypoints':
-                gt['ignore'] = (gt['num_keypoints'] == 0) or gt['ignore']
+                if len(gt['keypoints']) % 133 == 0 or len(gt['keypoints']) % 136 == 0:
+                    _ignore = gt['ignore']
+                    gt['ignore'] = dict()
+                    body_kp = np.array(gt['keypoints'][:-116*3])
+                    foot_kp = np.array(gt['keypoints'][-116*3:-110*3])
+                    face_kp = np.array(gt['keypoints'][-110*3:-42*3])
+                    hand_kp = np.array(gt['keypoints'][-42*3:])
+                    fullbody_kp = np.array(gt['keypoints'])
+
+                    vg_body = body_kp[2::3]
+                    vg_foot = foot_kp[2::3]
+                    vg_face = face_kp[2::3]
+                    vg_hand = hand_kp[2::3]
+                    vg_fullbody = fullbody_kp[2::3]
+                    k1_body = np.count_nonzero(vg_body > 0)
+                    k1_foot = np.count_nonzero(vg_foot > 0)
+                    k1_face = np.count_nonzero(vg_face > 0)
+                    k1_hand = np.count_nonzero(vg_hand > 0)
+                    k1_fullbody = np.count_nonzero(vg_fullbody > 0)
+
+                    gt['ignore']['body'] = (k1_body == 0) or _ignore
+                    gt['ignore']['foot'] = (k1_foot == 0) or _ignore
+                    gt['ignore']['face'] = (k1_face == 0) or _ignore
+                    gt['ignore']['hand'] = (k1_hand == 0) or _ignore
+                    gt['ignore']['fullbody'] = (k1_fullbody == 0) or _ignore
+                else:
+                    gt['ignore'] = (gt['num_keypoints'] == 0) or gt['ignore']
         self._gts = defaultdict(list)       # gt for evaluation
         self._dts = defaultdict(list)       # dt for evaluation
         for gt in gts:
@@ -329,7 +355,7 @@ class COCOeval:
                     continue
 
                 for g in gt:
-                    if g['ignore'] or (g['area']<aRng[0] or g['area']>aRng[1]):
+                    if g['ignore'][part] or (g['area']<aRng[0] or g['area']>aRng[1]):
                         g['_ignore'] = 1
                     else:
                         g['_ignore'] = 0
