@@ -141,6 +141,9 @@ class COCOeval:
         for gt in gts:
             self._gts[gt['image_id'], gt['category_id']].append(gt)
         for dt in dts:
+            vd = np.array(dt['keypoints'])[2::3]
+            if len(vd[vd>0]) == 0:
+                continue
             self._dts[dt['image_id'], dt['category_id']].append(dt)
         self.evalImgs = defaultdict(list)   # per-image per-category evaluation results
         self.eval     = {}                  # accumulated evaluation results
