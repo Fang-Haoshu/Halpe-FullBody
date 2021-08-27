@@ -248,7 +248,7 @@ class COCOeval:
                 face_kpnum = 68
                 hand_kpnum = 21 * 2
 
-            elif len(gts[0]['keypoints']) == 133 * 3:
+            elif len(gts[0]['keypoints']) == 133 * 3:   # surport for COCO WholeBody
                 sigmas = np.array([.26, .25, .25, .35, .35, .79, .79, .72, .72, .62,.62, 1.07, 1.07, .87, .87, .89, .89, .89, .89, .89, .89, .89, .89,
                          .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15,
                          .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15, .15,
@@ -259,13 +259,6 @@ class COCOeval:
                 foot_kpnum = 6
                 face_kpnum = 68
                 hand_kpnum = 21 * 2
-
-            '''
-            elif len(gt[0]['keypoints']) == 26 * 3:
-                sigmas = np.array([.26, .25, .25, .35, .35, .79, .79, .72, .72, .62,.62, 1.07, 1.07, .87, .87, .89, .89, .8,.8,.8,.89, .89, .89, .89, .89, .89,])/10.0
-            else:
-                sigmas = np.array([.26, .25, .25, .35, .35, .79, .79, .72, .72, .62,.62, 1.07, 1.07, .87, .87, .89, .89])/10.0
-            '''
 
             if part == 'body':
                 sigmas = sigmas[0 : body_kpnum]
@@ -281,22 +274,15 @@ class COCOeval:
             from tkinter import _flatten
             # compute oks between each detection and ground truth object
             for j, gt in enumerate(gts):
-                #gt['keypoints'].extend(gt['foot_kpts'])
-                #gt['keypoints'].extend(gt['face_kpts'])
-                #gt['keypoints'].extend(gt['lefthand_kpts'])
-                #gt['keypoints'].extend(gt['righthand_kpts'])
                 # create bounds for ignore regions(double the gt bbox)
                 if part == 'body':
                     g = np.array(gt['keypoints'][0 : body_kpnum*3],dtype=np.float32)
-                    #assert g.shape[0] == 23*3, g.shape
                 elif part == 'foot':
                     g = np.array(gt['keypoints'][body_kpnum*3 : (body_kpnum + foot_kpnum)*3],dtype=np.float32)
                 elif part == 'face':
                     g = np.array(gt['keypoints'][(body_kpnum + foot_kpnum)*3 : (body_kpnum + foot_kpnum + face_kpnum)*3],dtype=np.float32)
-                    #assert g.shape[0] == 68*3, g.shape
                 elif part == 'hand':
                     g = np.array(gt['keypoints'][(body_kpnum + foot_kpnum + face_kpnum)*3:],dtype=np.float32)
-                    #assert g.shape[0] == 42*3, g.shape
                 else:
                     g = np.array(gt['keypoints'],dtype=np.float32)
 
@@ -308,15 +294,12 @@ class COCOeval:
                 for i, dt in enumerate(dts):
                     if part == 'body':
                         d = np.array(dt['keypoints'][0 : body_kpnum*3],dtype=np.float32)
-                        #assert d.shape[0] == 23*3, d.shape
                     elif part == 'foot':
                         d = np.array(dt['keypoints'][body_kpnum*3 : (body_kpnum + foot_kpnum)*3],dtype=np.float32)
                     elif part == 'face':
                         d = np.array(dt['keypoints'][(body_kpnum + foot_kpnum)*3 : (body_kpnum + foot_kpnum + face_kpnum)*3],dtype=np.float32)
-                        #assert d.shape[0] == 68*3, d.shape
                     elif part == 'hand':
                         d = np.array(dt['keypoints'][(body_kpnum + foot_kpnum + face_kpnum)*3:],dtype=np.float32)
-                        #assert d.shape[0] == 42*3, d.shape
                     else:
                         d = np.array(dt['keypoints'], dtype=np.float32)
                     
