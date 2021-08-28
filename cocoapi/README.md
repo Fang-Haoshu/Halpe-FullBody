@@ -6,5 +6,6 @@ We get this API by modifying the [COCO API](https://github.com/cocodataset/cocoa
 
 ### To install:
 
-- For Python, run "make" under coco/PythonAPI
+- (Recommended) run `pip install halpecocotools`. 
+- Or, run `make` under PythonAPI/.
 
