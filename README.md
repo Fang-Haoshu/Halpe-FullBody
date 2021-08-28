@@ -79,7 +79,7 @@ Illustration:
 </div>
 
 ## Usage
-The annotation is in the same format as COCO dataset. For usage, a good start is to check out the `vis.py`. We also provide related APIs.
+The annotation is in the same format as COCO dataset. For usage, a good start is to check out the `vis.py`. We also provide related APIs. See [halpecocotools](https://github.com/HaoyiZhu/HalpeCOCOAPI), which can be installed by `pip install halpecocotools`.
 
 ## Evaluation
 We adopt the same evaluation metrics as COCO dataset. 
