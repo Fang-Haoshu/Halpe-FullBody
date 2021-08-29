@@ -39,10 +39,13 @@ __version__ = '2.0'
 # COCO>getImgIds, COCO>loadAnns, COCO>loadCats,
 # COCO>loadImgs, COCO>annToMask, COCO>showAnns
 
-# Microsoft COCO Toolbox.      version 2.0
-# Data, paper, and tutorials available at:  http://mscoco.org/
-# Code written by Piotr Dollar and Tsung-Yi Lin, 2014.
-# Licensed under the Simplified BSD License [see bsd.txt]
+# The original Microsoft COCO Toolbox is written
+# by Piotr Dollar and Tsung-Yi Lin, 2015.
+# Licensed under the Simplified BSD License [see coco/license.txt]
+# 
+# Updated and renamed to Halpe COCO Toolbox (halpecocotools) \
+# by Haoyi Zhu in 2021. The Halpe COCO Toolbox is
+# developed to support Halpe Full-body dataset.
 
 import json
 import time

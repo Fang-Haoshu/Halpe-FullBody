@@ -1,0 +1,3 @@
+recursive-include common *
+include *.pxd
+include *.pyx

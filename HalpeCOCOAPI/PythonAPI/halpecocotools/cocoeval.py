@@ -53,10 +53,15 @@ class COCOeval:
     #
     # See also coco, mask, pycocoDemo, pycocoEvalDemo
     #
-    # Microsoft COCO Toolbox.      version 2.0
-    # Data, paper, and tutorials available at:  http://mscoco.org/
-    # Code written by Piotr Dollar and Tsung-Yi Lin, 2015.
+    # The original Microsoft COCO Toolbox is written
+    # by Piotr Dollar and Tsung-Yi Lin, 2015.
     # Licensed under the Simplified BSD License [see coco/license.txt]
+    # 
+    # Updated and renamed to Halpe COCO Toolbox (cocohalpetools) \
+    # by Haoyi Zhu in 2021. The Halpe COCO Toolbox is
+    # developed to support wholebody human pose datasets, 
+    # including Halpe Full-body and COCO WholeBody.
+    
     def __init__(self, cocoGt=None, cocoDt=None, iouType='segm'):
         '''
         Initialize CocoEval using coco APIs for gt and dt
