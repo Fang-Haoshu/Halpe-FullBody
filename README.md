@@ -1,7 +1,7 @@
 # Halpe Full-Body Human Keypoints and HOI-Det dataset
 
 ## What is Halpe?
-**Halpe** is a joint project under [AlphaPose](https://github.com/MVIG-SJTU/AlphaPose) and [HAKE](http://hake-mvig.cn/).  It aims at pushing <b>Human Understanding</b> to the extreme. We provide detailed annotation of human keypoints, together with the human-object interaction trplets from HICO-DET. For each person, we annotate 136 keypoints in total, including head,face,body,hand and foot. Below we provide some samples of Halpe dataset.
+**Halpe** is a dataset introduced in [**AlphaPose paper**](http://arxiv.org/abs/2211.03375).  It aims at pushing <b>Human Understanding</b> to the extreme. We provide detailed annotation of human keypoints, together with the human-object interaction trplets from HICO-DET. For each person, we annotate 136 keypoints in total, including head,face,body,hand and foot. Below we provide some samples of Halpe dataset.
 <div align="center">
     <img src="docs/1.jpg", width="400" alt>
     <img src="docs/2.jpg", width="400" alt>
@@ -88,19 +88,12 @@ We adopt the same evaluation metrics as COCO dataset.
 A concurrent work [COCO-WholeBody](https://github.com/jin-s13/COCO-WholeBody) also annotate the full body keypoints. And HOI-DET for COCO dataset is also available at [V-COCO](https://github.com/s-gupta/v-coco)
 
 ## Citation
-The paper introducing this project is coming soon.
-If the data helps your research, please cite the following papers at present:
+If the data helps your research, please cite the following paper:
 ```
-@inproceedings{fang2017rmpe,
-  title={{RMPE}: Regional Multi-person Pose Estimation},
-  author={Fang, Hao-Shu and Xie, Shuqin and Tai, Yu-Wing and Lu, Cewu},
-  booktitle={ICCV},
-  year={2017}
-}
-@inproceedings{li2020pastanet,
-  title={PaStaNet: Toward Human Activity Knowledge Engine},
-  author={Li, Yong-Lu and Xu, Liang and Liu, Xinpeng and Huang, Xijie and Xu, Yue and Wang, Shiyi and Fang, Hao-Shu and Ma, Ze and Chen, Mingyang and Lu, Cewu},
-  booktitle={CVPR},
-  year={2020}
+@article{alphapose,
+  author = {Fang, Hao-Shu and Li, Jiefeng and Tang, Hongyang and Xu, Chao and Zhu, Haoyi and Xiu, Yuliang and Li, Yong-Lu and Lu, Cewu},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  title = {AlphaPose: Whole-Body Regional Multi-Person Pose Estimation and Tracking in Real-Time},
+  year = {2022}
 }
 ```
